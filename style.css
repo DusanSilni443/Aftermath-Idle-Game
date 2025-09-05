@@ -1,0 +1,11 @@
+body { font-family: Arial; text-align: center; color: #eee; background: #222; }
+h1 {
+    position: center;
+    top: 0px;
+    left: 410px;
+}
+h6 {
+    position: absolute;
+    top: 520px;
+    left: 1100px;
+}
