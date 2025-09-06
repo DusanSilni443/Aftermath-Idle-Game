@@ -11,8 +11,8 @@
 <div id="mainmenu">
     <button id="showChangelog">Change Log</button>
     <button id="showStartGame">Start Game</button>
-    <h6>Game Version: Indev 0.0.2</h6>
-    <h5>Game Developed by: Xen Researcher Dusan</h5>
+    <h6>Game Version: Indev 0.0.4</h6>
+    <h5>Game Developed by: GamaRayX Productions(Dusan443)</h5>
 </div>
 
 <div id="game" style="display: none;">
@@ -33,7 +33,12 @@
     <p>Logs: <span id="logs">0</span></p>
     <button class="tooltip" id="chopWood">
         Chop Down Trees
-        <span class="tooltiptext">Gives 1 wood per click.</span>
+        <span class="tooltiptext">Gives 1 log per click.</span>
+    </button>
+    <p>Stone: <span id="stone">0</span></p>
+    <button class="tooltip" id="collectStone">
+        Collect Stone
+        <span class="tooltiptext">Gives 1 stone per click.</span>
     </button>
     <p>Fire Wood: <span id="firewood">0</span></p>
     <button id="chopFireWood">Chop Logs into Fire Wood</button>
@@ -64,9 +69,9 @@
     <div id="constructionWindow" style="display:none;">
     <h2>Buildings</h2>
     <p>Build a house, a farm, or a workshop!</p>
-    <button id="buyHouse">House: <span>0</span></button>
-    <button id="buyFarm">Farm: <span>0</span></button>
-    <button id="buyLumberYard">Lumber Yard: <span>0</span></button>
+    <button id="buyHut">Hut: <span id="hut">0</span></button>
+    <button id="buyFarm">Farm: <span id="farm">0</span></button>
+    <button id="buyLumberYard">Lumber Yard: <span id="lumberyard">0</span></button>
     <button id="backToGame">Back</button>
 </div>
 <script src="script.js"></script>
