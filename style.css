@@ -1,4 +1,4 @@
-body { font-family: Arial; text-align: center; color: #eee; background: #222; }
+body { font-family: Arial; text-align: center; color: #eee; background: #373737; }
 h1 {
     position: center;
     top: 0px;
@@ -8,4 +8,38 @@ h6 {
     position: absolute;
     top: 520px;
     left: 1100px;
+}
+
+h5 {
+    position: absolute;
+    top: 520px;
+    left: 10px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -30%; /* position above button */
+  left: 50%;
+  margin-left: 80px; /* center tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
