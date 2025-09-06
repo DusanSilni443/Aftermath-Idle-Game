@@ -5,6 +5,9 @@ window.onload = function() {
     let water = 7;
     let logs = 0;
     let firewood = 0;
+    let house = 0;
+    let farm = 0;
+    let lumberyard = 0;
 
     function updateDisplay() {
         document.getElementById("people").textContent = people;
@@ -12,6 +15,9 @@ window.onload = function() {
         document.getElementById("water").textContent = Math.floor(water);
         document.getElementById("logs").textContent = Math.floor(logs);
         document.getElementById("firewood").textContent = Math.floor(firewood);
+        document.getElementById("house").textContent = house
+        document.getElementById("farm").textContent = farm
+        document.getElementById("lumberyard").textContent = lumberyard
     }
 
     function clampResources() {
@@ -54,6 +60,23 @@ window.onload = function() {
         updateDisplay();
     }
 
+    function buyLumberYard() {
+        if (logs > 39 && tools > 9) {
+            logs -= 40;
+            tools -= 10;
+        } else {
+            alert("You dont have enough materials to build a Lumber Yard!(40 Logs & 10 Tools needed)")
+        }
+        clampResources();
+        updateDisplay();
+    }
+
+    function produceLogs() {
+    logs += lumberYards * 1; // each lumber yard produces 1 log per second
+    document.getElementById('logs').textContent = logs; // update display
+    setInterval(produceLogs, 1000); // run every 1000 ms = 1 second
+    }
+
     // Link button
     document.getElementById("hunt").addEventListener("click", hunt)
     document.getElementById("collectWater").addEventListener("click", collectWater)
@@ -85,6 +108,18 @@ document.getElementById("backToMainMenu").addEventListener("click", function() {
 
 document.getElementById("showStartGame").addEventListener("click", function() {
     document.getElementById("mainmenu").style.display = "none";
+    document.getElementById("game").style.display = "block";
+    document.getElementById("title").textContent = "Game";
+});
+
+document.getElementById("constructionTab").addEventListener("click", function() {
+    document.getElementById("game").style.display = "none";
+    document.getElementById("constructionWindow").style.display = "block";
+    document.getElementById("title").textContent = "Construction";
+});
+
+document.getElementById("backToGame").addEventListener("click", function() {
+    document.getElementById("constructionWindow").style.display = "none";
     document.getElementById("game").style.display = "block";
     document.getElementById("title").textContent = "Game";
 });
