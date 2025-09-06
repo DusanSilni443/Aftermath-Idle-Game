@@ -11,7 +11,7 @@
 <div id="mainmenu">
     <button id="showChangelog">Change Log</button>
     <button id="showStartGame">Start Game</button>
-    <h6>Game Version: Indev 0.0.4</h6>
+    <h6>Game Version: Indev 0.0.5</h6>
     <h5>Game Developed by: GamaRayX Productions(Dusan443)</h5>
 </div>
 
@@ -19,7 +19,9 @@
     <button id="backToMainMenu">Back</button>
     <button id="saveBtn">Save</button>
     <button id="loadBtn">Load</button>
-    <p>People: <span id="people">1</span></p>
+    <p>People: <span id="people">1</span>/<span id="maxPeople">0</span></p>
+    <p>Happiness: <span id="happiness">50</span></p>
+    <p>Authority: <span id="authority">100</span></p>
     <p>Food: <span id="food">5</span></p>
     <button class="tooltip" id="hunt">
         Hunt
@@ -56,22 +58,33 @@
 <div id="changelog" style="display: none;">
     <button id="backToMenu">Back</button>
     <h2>Change Log</h2>
-    <ul>
-        <li>MAJOR UPDATE-Indev:0.0.4 – Added Save/Load System, More Items, Fixed Buildings & Tools!</li>
-        <li>Content Update-Indev:0.0.3 – Added Buildings and Tools To The Game!</li>
-        <li>Content Update-Indev:0.0.2 – Added Actions To The Game!</li>
-        <li>Minor Update-Indev:0.0.1 – Added The Change Log & More Buttons!</li>
-        <li>STARTED DEVELOPMENT :P</li>
-    </ul>
+    <pre id="changelogText"></pre>
 </div>
 
 <div>
     <div id="constructionWindow" style="display:none;">
     <h2>Buildings</h2>
     <p>Build a house, a farm, or a workshop!</p>
-    <button id="buyHut">Hut: <span id="hut">0</span></button>
-    <button id="buyFarm">Farm: <span id="farm">0</span></button>
-    <button id="buyLumberYard">Lumber Yard: <span id="lumberyard">0</span></button>
+    <button id="buildHut">
+        Hut: 
+        <span id="hut">0</span>
+    </button>
+    <button id="buildFarm">
+        Farm: 
+        <span id="farm">0</span>
+    </button>
+    <button id="buildWell">
+        Well:
+        <span id="well">0</span>
+    </button>
+    <button id="buildLumberYard">
+        Lumber Yard: 
+        <span id="lumberyard">0</span>
+    </button>
+    <button id="buildQuarry">
+        Quarry: 
+        <span id="quarry">0</span>
+    </button>
     <button id="backToGame">Back</button>
 </div>
 <script src="script.js"></script>
